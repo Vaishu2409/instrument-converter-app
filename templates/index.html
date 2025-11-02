@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instrument Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background-color: rgba(255,255,255,0.9);
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+        input[type="file"], select, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+        }
+        button {
+            background-color: #ff7e5f;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: #feb47b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Instrument Converter</h1>
+    <form action="/convert" method="post" enctype="multipart/form-data">
+        <input type="file" name="midi_file" accept=".midi,.mid,.wav"><br>
+        <select name="instrument">
+            <option value="piano">Piano</option>
+            <option value="violin">Violin</option>
+            <option value="flute">Flute</option>
+            <option value="guitar">Guitar</option>
+            <option value="drum">Drum</option>
+            <!-- add more instruments here -->
+        </select><br>
+        <button type="submit">Convert</button>
+    </form>
+</body>
+</html>
+
