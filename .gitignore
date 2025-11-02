@@ -1,1 +1,19 @@
-soundfonts/FluidR3_GM.sf2
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.env/
+
+# Soundfonts and large media
+soundfonts/
+outputs/
+uploads/
+
+# macOS files
+.DS_Store
+
+# Flask-specific
+instance/
+*.log
